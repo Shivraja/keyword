@@ -1,397 +1,397 @@
-image
-text
-devices
-recognition
-camera
-ocr
-regions
-skew
-character
-number
-system
-card
-memory
-block
-business
-fig.
-images
-m
-pixels
-region
-speed
-systems
-color
-n
-processing
-values
-work
-computer
-computing
-desktop
-english
-perspective
-point
-r
-set
-accuracy
-algorithms
-angle
-area
-bottom
-cell
-characters
-components
-contact
-correction
-document
-h
-image.
-images.
-india
-information
-input
-level
-lines
-mhz
-non
-optical
-phones
-pixel
-research
-science
-segmentation
-technique
-textual
-trs
-‘nokia
-(online):
-/graphics
-addition
-amount
-applications
-b
-background
-c
-cameras
-characters.
-department
-description
-design
-devices,
-devices.
-diagram
-distortion
-distortion.
-effect
-engine
-esearch
-extraction
-g
-height
-ijcsi
-images,
-international
-issn
-issue
-issues,
-jadavpur
-journal
-july
-kolkata,
-l
-mb
-need
-pda
-phone
-profile
-profiles
-ratio,
-rectangle
-scale
-script
-side
-size
-texts
-time
-types
-university,
-vol.
-www.ijcsi.org
-‘hp
-(bb)
-(bcr)
-(fpu)
-(ib)
-(nr)
-(ocr
-(ocr)
-(pda),
-(ram)
-(tr)
-74%.
-access
-addresses
-advancement
-alignment
-amera
-angle.
-applications,
-applications.
-area,
-arithmetic
-arm
-aspect
-assistants
-axes
-ayatullah
-basu
-bbs
-bbs,
-binarization
-bit
-blocks
-blocks.
-book
-boundary
-breadth
-brief
-bstract
-calculation
-camera,
-camera.
-capit
-capital
-carte
-case
-center
-centroid
-ces
-challenges
-challenges,
-challenges.
-characteristics
-characters,
-china
-classifier.
-co
-columns
-combination
-communication,
-computers
-consideration
-consumes
-consuming.
-course,
-coverage
-cpu
-criterion.
-day
-decades
-decomposition
-degrees
-denote
-density,
-detail
-devi
-device,
-digital
-dimensions,
-displays
-distance
-distances
-docum
-documents
-dth
-egions,
-el.
-em
-emulators
-end
-engine,
-engineering
-engineering,
-english.
-ents
-eq.
-ess
-estimate
-evices.
-example
-ext
-faruk
-feasibility
-features
-features.
-fed
-field
-gray/black
-hand
-hand,
-handset
-histogram,
-howe
-howrah,
-hz
-ibs
-illumination,
-indication
-ing
-instance,
-institute
-intensities,
-intensity
-introduction
-involvement
-ipaq
-iphones,
-ipods,
-k
-kanji
-keywords:
-koga
-layer
-lcd/led
-length
-letters
-letters.
-levels
-levels,
-lies
-life
-light
-line
-luo
-ma
-machine
-majumder
-manhattan
-manual
-marvell
-master
-matrix
-maximum
-mb.
-mckv
-mean
-memory.
-mhz.
-mita
-mobile
-modern
-module
-module.
-mollah
-moment
-moreov
-motorola
-mputation
-nabamita
-nasipuri
-nature
-nr
-nrs
-numbers.
-operation.
-operations
-operations.
-order
-outline
-owever,
-p
-paper
-paq
-pass.
-pdas
-personal
-phone.
-phones,
-picture.
-pixel,
-pixels,
-planes
-population
-portions
-presents
-process
-processor
-processors
-processors’
-profiles.
-prototype
-quality
-ram,
-random
-range
-reader
-reading
-recogni
-recognition.
-recognizin
-regi
-region,
-region.
-regions.
-removal
-researchers
-result
-results.
-risc
-rows
-run
-scanner
-scanners
-scanners.
-school
-scripts
-sdram
-section
-sets
-shot
-shows
-sides
-similarity
-skewe
-skewness
-source
-speed,
-start
-studies
-subhadip
-system,
-system.
-t
-template
-terms
-tesseract,
-texts.
-time,
-total
-tr
-transformation
-translat
-tree
-trend
-trong
-type
-unavailability
-unit
-unparallel
-usability
-usiness
-value
-variation
-ver,
-vga
-visite
-viz.
-w
-weight
-wi
-width
-work,
-works
-worth
-x
-y
-yield
-ystem
+21	image
+16	text
+14	devices
+13	recognition
+11	camera
+11	ocr
+11	regions
+11	skew
+9	character
+9	number
+9	system
+8	card
+8	memory
+6	block
+6	business
+6	fig.
+6	images
+6	m
+6	pixels
+6	region
+6	speed
+6	systems
+5	color
+5	n
+5	processing
+5	values
+5	work
+4	computer
+4	computing
+4	desktop
+4	english
+4	perspective
+4	point
+4	r
+4	set
+3	accuracy
+3	algorithms
+3	angle
+3	area
+3	bottom
+3	cell
+3	characters
+3	components
+3	contact
+3	correction
+3	document
+3	h
+3	image.
+3	images.
+3	india
+3	information
+3	input
+3	level
+3	lines
+3	mhz
+3	non
+3	optical
+3	phones
+3	pixel
+3	research
+3	science
+3	segmentation
+3	technique
+3	textual
+3	trs
+3	‘nokia
+2	(online):
+2	/graphics
+2	addition
+2	amount
+2	applications
+2	b
+2	background
+2	c
+2	cameras
+2	characters.
+2	department
+2	description
+2	design
+2	devices,
+2	devices.
+2	diagram
+2	distortion
+2	distortion.
+2	effect
+2	engine
+2	esearch
+2	extraction
+2	g
+2	height
+2	ijcsi
+2	images,
+2	international
+2	issn
+2	issue
+2	issues,
+2	jadavpur
+2	journal
+2	july
+2	kolkata,
+2	l
+2	mb
+2	need
+2	pda
+2	phone
+2	profile
+2	profiles
+2	ratio,
+2	rectangle
+2	scale
+2	script
+2	side
+2	size
+2	texts
+2	time
+2	types
+2	university,
+2	vol.
+2	www.ijcsi.org
+2	‘hp
+1	(bb)
+1	(bcr)
+1	(fpu)
+1	(ib)
+1	(nr)
+1	(ocr
+1	(ocr)
+1	(pda),
+1	(ram)
+1	(tr)
+1	74%.
+1	access
+1	addresses
+1	advancement
+1	alignment
+1	amera
+1	angle.
+1	applications,
+1	applications.
+1	area,
+1	arithmetic
+1	arm
+1	aspect
+1	assistants
+1	axes
+1	ayatullah
+1	basu
+1	bbs
+1	bbs,
+1	binarization
+1	bit
+1	blocks
+1	blocks.
+1	book
+1	boundary
+1	breadth
+1	brief
+1	bstract
+1	calculation
+1	camera,
+1	camera.
+1	capit
+1	capital
+1	carte
+1	case
+1	center
+1	centroid
+1	ces
+1	challenges
+1	challenges,
+1	challenges.
+1	characteristics
+1	characters,
+1	china
+1	classifier.
+1	co
+1	columns
+1	combination
+1	communication,
+1	computers
+1	consideration
+1	consumes
+1	consuming.
+1	course,
+1	coverage
+1	cpu
+1	criterion.
+1	day
+1	decades
+1	decomposition
+1	degrees
+1	denote
+1	density,
+1	detail
+1	devi
+1	device,
+1	digital
+1	dimensions,
+1	displays
+1	distance
+1	distances
+1	docum
+1	documents
+1	dth
+1	egions,
+1	el.
+1	em
+1	emulators
+1	end
+1	engine,
+1	engineering
+1	engineering,
+1	english.
+1	ents
+1	eq.
+1	ess
+1	estimate
+1	evices.
+1	example
+1	ext
+1	faruk
+1	feasibility
+1	features
+1	features.
+1	fed
+1	field
+1	gray/black
+1	hand
+1	hand,
+1	handset
+1	histogram,
+1	howe
+1	howrah,
+1	hz
+1	ibs
+1	illumination,
+1	indication
+1	ing
+1	instance,
+1	institute
+1	intensities,
+1	intensity
+1	introduction
+1	involvement
+1	ipaq
+1	iphones,
+1	ipods,
+1	k
+1	kanji
+1	keywords:
+1	koga
+1	layer
+1	lcd/led
+1	length
+1	letters
+1	letters.
+1	levels
+1	levels,
+1	lies
+1	life
+1	light
+1	line
+1	luo
+1	ma
+1	machine
+1	majumder
+1	manhattan
+1	manual
+1	marvell
+1	master
+1	matrix
+1	maximum
+1	mb.
+1	mckv
+1	mean
+1	memory.
+1	mhz.
+1	mita
+1	mobile
+1	modern
+1	module
+1	module.
+1	mollah
+1	moment
+1	moreov
+1	motorola
+1	mputation
+1	nabamita
+1	nasipuri
+1	nature
+1	nr
+1	nrs
+1	numbers.
+1	operation.
+1	operations
+1	operations.
+1	order
+1	outline
+1	owever,
+1	p
+1	paper
+1	paq
+1	pass.
+1	pdas
+1	personal
+1	phone.
+1	phones,
+1	picture.
+1	pixel,
+1	pixels,
+1	planes
+1	population
+1	portions
+1	presents
+1	process
+1	processor
+1	processors
+1	processors’
+1	profiles.
+1	prototype
+1	quality
+1	ram,
+1	random
+1	range
+1	reader
+1	reading
+1	recogni
+1	recognition.
+1	recognizin
+1	regi
+1	region,
+1	region.
+1	regions.
+1	removal
+1	researchers
+1	result
+1	results.
+1	risc
+1	rows
+1	run
+1	scanner
+1	scanners
+1	scanners.
+1	school
+1	scripts
+1	sdram
+1	section
+1	sets
+1	shot
+1	shows
+1	sides
+1	similarity
+1	skewe
+1	skewness
+1	source
+1	speed,
+1	start
+1	studies
+1	subhadip
+1	system,
+1	system.
+1	t
+1	template
+1	terms
+1	tesseract,
+1	texts.
+1	time,
+1	total
+1	tr
+1	transformation
+1	translat
+1	tree
+1	trend
+1	trong
+1	type
+1	unavailability
+1	unit
+1	unparallel
+1	usability
+1	usiness
+1	value
+1	variation
+1	ver,
+1	vga
+1	visite
+1	viz.
+1	w
+1	weight
+1	wi
+1	width
+1	work,
+1	works
+1	worth
+1	x
+1	y
+1	yield
+1	ystem
