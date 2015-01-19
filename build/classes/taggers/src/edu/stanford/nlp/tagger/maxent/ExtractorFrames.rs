@@ -1,0 +1,10 @@
+edu.stanford.nlp.tagger.maxent.ExtractorFrames$ExtractorWordTag
+edu.stanford.nlp.tagger.maxent.ExtractorFrames$ExtractorContinuousTagConjunction
+edu.stanford.nlp.tagger.maxent.ExtractorFrames$ExtractorTwoWordsTag
+edu.stanford.nlp.tagger.maxent.ExtractorFrames$ExtractorTwoWords
+edu.stanford.nlp.tagger.maxent.ExtractorFrames$ExtractorThreeTags
+edu.stanford.nlp.tagger.maxent.ExtractorFrames$ExtractorWordLowerCase
+edu.stanford.nlp.tagger.maxent.ExtractorFrames
+edu.stanford.nlp.tagger.maxent.ExtractorFrames$ExtractorWordTwoTags
+edu.stanford.nlp.tagger.maxent.ExtractorFrames$ExtractorTwoTags
+edu.stanford.nlp.tagger.maxent.ExtractorFrames$ExtractorCWordCapCase

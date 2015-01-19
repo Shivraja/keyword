@@ -1,0 +1,696 @@
+
+Design of a
+n Optical Character Recognition System for
+Camera
+-
+based
+Handheld Devices
+Ayatullah Faruk Mollah
+1
+,
+Nabamita Majumder
+2
+, Subhadip Basu
+3
+and
+Mita Nasipuri
+4
+1
+School of Mobile
+Computing and Communication,
+Jadavpur University, Kolkata, India
+2
+Department of Master of Computer Applications,
+MCKV Institute of Engineering, Howrah, India
+3, 4
+Department of Computer Science and Engineering
+,
+Jadavpur University, Kolkata, India
+A
+bstract
+This paper presents a
+complete
+Optical Character Recognition
+(OCR) s
+ystem for
+camera captured image
+/graphics
+embedded
+textual documents for handheld d
+evices.
+At first, text regions are
+extracted and skew corrected. Then, these regions are binarized
+and segmented into lines and characters. Characters are passed
+into
+the recognition module.
+Experimenting with a set of 100
+business card images, captured by cell phone camera, we have
+achieved
+a maximum recognition accuracy of 92.
+74%.
+Compared
+to Tesseract, a
+n open source
+desktop
+-
+based
+powerful OCR
+engine, present recognition accuracy
+is worth contributing.
+Moreover, the developed technique is computationally efficient
+and
+consumes low memory so as to be applicable on
+handheld
+devi
+ces
+.
+Keywords:
+Character Recognition System, Camera Captured
+Document Images, Handheld Device, Image Segmentation
+1.
+Introduction
+Until a few decades ago, r
+esearch
+in the field of
+Optical
+Character Recognition (OCR
+) was limited to document
+images acquired
+with flatbed desktop scanners.
+The
+usability of such systems is limited as they are not portable
+because of large size of the scanners
+and
+the need of a
+computing system
+. Moreover, the shot
+speed of a
+scanner
+is slower than that of a digital camera.
+Recent
+ly, with the
+advancement of processing speed
+and internal memory
+of
+hand
+-
+held mobile devices such as
+high
+-
+end
+cell
+-
+phones
+,
+Personal Digital Assistants (PDA),
+smart phones, iPhones,
+iPods, etc.
+having built
+-
+in digital cameras
+,
+a new trend of
+research has em
+erged
+into picture. Researchers have dared
+to think of running OCR applications
+on such devices for
+having real time results.
+An
+automatic Business Card
+Reader (BCR)
+, meant for automatic population of relevant
+contact
+information from a business card also known as
+carte
+de
+visite
+or visiting card into the contact book of the
+devices,
+is an example of such applications
+.
+H
+owever,
+computing
+under handheld devices involves a
+number of challenges. Because of the non
+-
+contact
+nature
+of digital cameras attached to handheld devices, acquired
+images very often suffer from skew and perspective
+distortion. In addition to that
+,
+manual involvement in the
+capturing process
+, uneven and insufficient illumination,
+and
+unavailability of s
+ophisticated focusing system yield
+poor quality images.
+The processing speed
+and memory size
+of handheld
+devices are
+not yet
+sufficient
+enough
+so as
+to run
+desktop
+based
+OCR algorithms
+that
+are computationally expensive
+and require high amount of memory.
+The processing
+speed
+s
+of mobile devices with built
+-
+in camera start with as
+low as few MHz to as high as 624 MHz. The handset
+‘Nokia 6600’ with an in
+-
+built VGA camera contains an
+ARM9 32
+-
+bit RISC CPU having a processing speed of 104
+MHz [
+1
+]. The PDA ‘HP i
+PAQ 210’ has Marvell PXA310
+type processor that can compute up to 624 MHz [
+2
+]. Some
+mobile devices have dual processors too. For instance,
+‘Nokia N95 8GB’ has a ‘Dual ARM
+-
+11 332 M Hz
+processors’ [
+3
+]. Processing speed of other mobile phones
+and PDAs are usually in between them.
+Besides the lower
+computing speed, these devices provide limited caching.
+Random Access Memory (RAM) which is frequently
+referred to as
+internal memory
+in case of mobile devices is
+usually 2
+-
+128 MB. Among the mobile devices with high
+amount of RAM, the following may be mentioned. The
+PDA ‘HP iPAQ 210’ has a 128 MB SDRAM [
+2
+]. The cell
+-
+phone ‘Nokia N95 8GB’ has a 128 MB internal memory
+[4]
+.
+C
+ompared to desktop computers
+, t
+his much of
+memory is very l
+ess
+.
+In addition to
+the above challenges,
+IJCSI International Journal of Computer Science Issues, Vol. 8, Issue 4, No 1, July 2011
+ISSN (Online): 1694-0814
+www.IJCSI.org
+283
+the mobile devices do not have a Floating Point Unit
+(FPU) [5] which is required for floating point
+arithmetic
+operations.
+Howe
+ver, floating point operations can be
+performed on such devices by using floating point
+emulators that result in slower operation. Some more
+challenges have been reported in
+[6]
+. Therefore,
+need is
+immensely felt to design computationally efficient
+and
+light
+-
+weight
+OCR
+algorithms for
+handheld
+mobile devices.
+A number of research works on mobile OCR systems have
+been found.
+L
+aine et al
+.
+[7]
+developed a system
+for only
+English capital letters. At first, the captured image is skew
+corrected by looking for a line having the highest number
+of consecutive white pixels and by maximizing the given
+alignment criterion. Then, the image is segmented based
+on X
+-
+Y Tree decomposition and recognized
+by measuring
+Manhattan
+distance based
+similarity
+for a set of centroid to
+boundary features.
+However, this work addresses only the
+English capit
+al letters and the accuracy obtained is not
+satisfactory for real life applications.
+Luo et al. of
+Motorola China Research Center
+have
+presented camera based mobile OCR systems for camera
+phones in
+[8]
+-
+[9]
+.
+In
+[8]
+, a b usiness card image is first
+down sampled to estimate the skew angle. Then the text
+regions are skew corrected by that angle and binarized
+thereafter. Such text regions are segmented into
+lines and
+characters, and subsequently passed to an OCR engine for
+recognition. The OCR engine is designed as a two layer
+template based classifier. A similar system is presented for
+Chinese
+-
+English mixed script business card images in
+[9]
+.
+In
+[10]
+, Koga et al. has presented an outline of a prototype
+Kanji OCR
+for recognizin
+g machine printed
+Japanese
+texts
+and translat
+ing them
+into English.
+Another work on
+Chinese script recognition for business card images is
+reported in
+[11]
+. Moreov
+er, r
+esearch in developing OCR
+systems
+for
+mobile devices is not limited to document
+images only.
+Shen at el.
+[12]
+worked on reading
+LCD/LED displays with a camera
+phone.
+A character
+recognition system for Chinese scripts has been presented
+in
+[13]
+.
+These studies
+reflect the feasibility and
+ma
+k
+e a s trong
+indication that OCR systems can be designed
+for
+handheld
+devices. But, of course, the algorithms deployed in these
+systems must be co
+mputation friendly. They should be
+computationally efficient and low memory consuming.
+Under the current work, a
+character recognition
+system is
+presented for
+recogni
+zing
+English characters extracted from
+camera captured image
+/graphics
+embedded text docum
+ents
+such as business card images.
+Fig. 1:
+Block diagram of the present system
+2.
+Present Work
+Modern day handheld devices are usually capable of
+capturing color images. A color image consists of color
+pixels represented by a combination of three basic color
+components viz. red (
+r
+), green (
+g
+) and blue (
+b
+). The range
+of values for all these color components is 0
+-
+255. So, the
+corresponding gray scale value
+푓
+(
+푥
+,
+푦
+)
+for each pixel,
+which also lies between 0
+-
+255, may be obtained by using
+Eq. 1.
+푓
+(
+푥
+,
+푦
+)
+=
+0
+.
+299
+x
+푟
+(
+푥
+,
+푦
+)
++
+0
+.
+587
+x
+푔
+(
+푥
+,
+푦
+)
++
+0
+.
+114
+x
+푏
+(
+푥
+,
+푦
+)
+(1)
+Applying this transformation for all pixels, the gray scale
+image is obtained and is represented as a matrix of gray
+level intensities,
+퐼
+푃푥푄
+=
+[
+푓
+(
+푥
+,
+푦
+)
+]
+푃푥푄
+where
+푃
+and
+푄
+denote the number of rows i.e. t
+he height of the image and
+the number of the columns i.e. the width of the image
+respectively.
+푓
+(
+푥
+,
+푦
+)
+∈퐺
+퐿
+= {0,1, ... ,
+퐿−
+1}
+, the set of all
+gray levels, where
+퐿
+is the total number of gray levels in
+the image. Such a gray level image is fed as input to the
+p
+roposed character recognition system.
+The block diagram of the present character recognition
+system is shown in Fig. 1. The input gray level image is
+segmented into two types of regions
+–
+Text Regions (TR)
+and Non
+-
+text Regions (NR) as illustrated in Sec.
+2.1. The
+NRs are removed and the TRs are de
+-
+skewed as discussed
+in Sec 2.2. In Sec. 2.3
+and 2.4
+, the de
+-
+skewe
+d TRs are
+binarized and segmented into lines
+and characters. Finally,
+the characters are recognized as illustrated in Sec. 2.
+5.
+Image
+Text
+Binarization
+Segmentation
+Recognition
+Text Extraction
+Skew Correction
+IJCSI International Journal of Computer Science Issues, Vol. 8, Issue 4, No 1, July 2011
+ISSN (Online): 1694-0814
+www.IJCSI.org
+284
+2.1
+T
+ext Region Extraction
+The input image
+퐼
+푃푥푄
+is, at first, partitioned into
+m
+number
+of blocks
+퐵
+푖
+, i=1,2,...,
+m
+such that
+퐵
+푖
+∩퐵
+푗
+=
+∅
+and
+퐼
+푃푥푄
+=
+⋃
+퐵
+푖
+푚
+푖=1
+. A block
+퐵
+푖
+is a set of pixels represented as
+퐵
+푖
+=
+[
+푓
+(
+푥
+,
+푦
+)
+]
+퐻푥푊
+where
+H
+and
+W
+are the height and the
+wi
+dth of the block respectively. Each individual
+퐵
+푖
+is
+classified as either Information Block (IB) or Background
+Block (BB) based on the intensity variation within it. After
+removal of BBs, adjacent/contiguous IBs constitute
+isolated components called as r
+egions,
+푅
+푖
+,
+i=1,2, ..,
+n
+such
+that
+푅
+푖
+∩푅
+푗
+=
+∅
+for all
+ji
+≠
+but
+⋃
+푅
+푖
+≠
+푛
+푖=1
+퐼
+푃푥푄
+because
+some BBs have got removed
+.
+The area of a region is
+always a multiple of the area of the blocks. These regions
+are then classified as TR or NR using various
+characteristics features of textual and non
+-
+textual regions
+such as dimensions, aspect ratio, information pixel density,
+region
+area, coverage ratio, histogram, etc. A detail
+description of the technique has been
+reported
+in one of
+our prior work
+[14]
+. Fig. 2 shows a camera captured image
+and the TRs extracted from it.
+Fig.
+2. A camera captured image and the text regions
+extracted from it
+2.2
+Skew Correction
+C
+amera captured images
+very often
+suffer from skew and
+perspective distortion as discussed in Section 1. These
+occur
+due to unparallel axes and/or planes
+at the time of
+capturing the image
+. The acquired image does not become
+uniformly skewed mainly due to perspective distortion.
+Skewness of different portions of the image may vary
+between
++
+훼
+to
+−훽
+degrees where both
+α
+and
+β
+are +ve
+numbers. Therefore, the image cannot be de
+-
+skewed at a
+single pass. On the other hand, the effect of perspective
+distortion is distributed throughout the image. Its effect is
+hardly visible within a small region (e.g. the area of a
+character
+) of the image. At the same time, we see that the
+image segmentation module generates only a few text
+regions. So, these text regions are de
+-
+skewed using a
+computationally efficient and fast skew correction
+technique designed in our work and published in
+[15]
+. A
+brief description has been given here.
+Every text region has two types of pixels
+–
+dark and gray.
+The dark pixels constitute the texts and the gray pixels
+are
+background around the texts. For the four sides of the
+virtual bounding rectangle of a text region, we can have
+four sets of values that will be called as profiles. If the
+length and breadth of the bounding rectangle are
+M
+and
+N
+respectively, then two profiles will have
+M
+number of
+values each and the other two will have
+N
+number of
+values each. These values are the distances in terms of
+pixel from a side to the first gray/black pixel of the text
+region. Among these four profiles
+, the one which is from
+the bottom side of the text region is taken into
+consideration for estimating skew angle as shown in Fig.
+3. This bottom profile is denoted as {
+h
+i
+, i=1,2,...,
+M
+}.
+Fig. 3.
+Calculation of skew angle from bottom profile
+of a text regi
+on
+The mean (
+휇
+=
+1
+푀
+∑
+ℎ
+푖
+푀
+푖=1
+) and the
+first order moment
+(
+휏
+=
+1
+푀
+∑
+|
+휇−
+

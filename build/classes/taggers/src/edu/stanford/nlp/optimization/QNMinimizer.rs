@@ -1,0 +1,10 @@
+edu.stanford.nlp.optimization.QNMinimizer$eState
+edu.stanford.nlp.optimization.QNMinimizer$eScaling
+edu.stanford.nlp.optimization.QNMinimizer$QNInfo$NegativeCurvature
+edu.stanford.nlp.optimization.QNMinimizer$QNInfo
+edu.stanford.nlp.optimization.QNMinimizer$eLineSearch
+edu.stanford.nlp.optimization.QNMinimizer$Record
+edu.stanford.nlp.optimization.QNMinimizer$SurpriseConvergence
+edu.stanford.nlp.optimization.QNMinimizer
+edu.stanford.nlp.optimization.QNMinimizer$QNInfo$ZeroGradient
+edu.stanford.nlp.optimization.QNMinimizer$MaxEvaluationsExceeded
